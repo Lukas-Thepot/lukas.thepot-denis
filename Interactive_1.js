@@ -299,3 +299,4 @@ function discoverSailing(){
     backgroundText.style.opacity = "1";
 }
 document.getElementById("discoverSailing").addEventListener("click", discoverSailing);
+document.getElementById("discoverSailing2").addEventListener("click", discoverSailing);

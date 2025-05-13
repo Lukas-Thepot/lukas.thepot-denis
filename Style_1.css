@@ -21,7 +21,7 @@ h2{
 
 h3{
     font-family: 'Aptos', sans-serif;
-    background-image: url("weather.png");
+    background-image: url("Images/weather.png");
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -306,7 +306,7 @@ a:hover{
 .star {
     width: 20px;
     height: 21px;
-    background: url(Star.png) no-repeat center center;
+    background: url(Images/Star.png) no-repeat center center;
     background-size: contain;
     position: absolute;
     border-radius: 50%;
