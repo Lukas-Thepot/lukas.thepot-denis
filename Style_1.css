@@ -204,12 +204,6 @@ a:hover{
     height: auto;
 }
 
-.sparBuilding{
-    float: left;
-    max-height: 70%;
-    width: auto;
-    margin-right: 4%;
-}
 
 .foilCFD{
     float: inherit;
