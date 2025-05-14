@@ -543,14 +543,14 @@ a:hover{
 }
 
 #footer{
-    padding: 0vh 4vw;
+    padding: 10px 4vw;
     align-content: center;
     align-items: center;
-    position: relative;
-    top:91vh;
-    width: 100vw;
-    height: 10vh;
-    background-color: rgba(255, 255, 255, 0.7); 
+    position: relative; /* Changez de relative à static */
+    top: auto; /* Supprimez la valeur top */
+    width: 100%;
+    height: auto; /* Ajustez automatiquement la hauteur */
+    background-color: rgba(255, 255, 255, 0.7);
 }
 th.social {
     text-align: right; /* Aligner les éléments à gauche */

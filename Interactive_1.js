@@ -57,6 +57,7 @@ function functionResize() {
     // Ajuster les dimensions réelles pour éviter les conflits
     content.style.width = `${1920 * scaleValue1}px`;
     content.style.height = `${1080 * scaleValue1}px`;
+    document.getElementById("footer").style.display = "block";
 }
 window.addEventListener("resize", functionResize);
 window.addEventListener("load", functionResize);
