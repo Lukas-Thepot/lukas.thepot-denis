@@ -1,37 +1,48 @@
 
 //Déplacement grabbing
 const slider = document.querySelector('.scroll-container');
-        let isDown = false;
-        let startX, startY;
-        let scrollLeft, scrollTop;
+let isDown = false;
+let startX, startY;
+let scrollLeft, scrollTop;
 
-        slider.addEventListener('mousedown', (e) => {
-            isDown = true;
-            slider.classList.add('active');
-            startX = e.pageX - slider.offsetLeft;
-            startY = e.pageY - slider.offsetTop;
-            scrollLeft = slider.scrollLeft;
-            scrollTop = slider.scrollTop;
-        });
+// Fonction pour gérer les événements tactiles et souris
+function startDrag(e) {
+    isDown = true;
+    slider.classList.add('active');
+    const event = e.touches ? e.touches[0] : e; // Gère les événements tactiles et souris
+    startX = event.pageX - slider.offsetLeft;
+    startY = event.pageY - slider.offsetTop;
+    scrollLeft = slider.scrollLeft;
+    scrollTop = slider.scrollTop;
+}
 
-        slider.addEventListener('mouseleave', () => {
-            isDown = false;
-        });
+function stopDrag() {
+    isDown = false;
+    slider.classList.remove('active');
+}
 
-        slider.addEventListener('mouseup', () => {
-            isDown = false;
-        });
+function moveDrag(e) {
+    if (!isDown) return;
+    e.preventDefault();
+    const event = e.touches ? e.touches[0] : e; // Gère les événements tactiles et souris
+    const x = event.pageX - slider.offsetLeft;
+    const y = event.pageY - slider.offsetTop;
+    const walkX = (x - startX) * 2; // Ajuster la vitesse du déplacement horizontal
+    const walkY = (y - startY) * 2; // Ajuster la vitesse du déplacement vertical
+    slider.scrollLeft = scrollLeft - walkX;
+    slider.scrollTop = scrollTop - walkY;
+}
 
-        slider.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - slider.offsetLeft;
-            const y = e.pageY - slider.offsetTop;
-            const walkX = (x - startX) * 2; // Ajuster la vitesse du déplacement horizontal
-            const walkY = (y - startY) * 2; // Ajuster la vitesse du déplacement vertical
-            slider.scrollLeft = scrollLeft - walkX;
-            slider.scrollTop = scrollTop - walkY;
-        });
+// Événements pour souris
+slider.addEventListener('mousedown', startDrag);
+slider.addEventListener('mouseleave', stopDrag);
+slider.addEventListener('mouseup', stopDrag);
+slider.addEventListener('mousemove', moveDrag);
+
+// Événements pour tactile
+slider.addEventListener('touchstart', startDrag);
+slider.addEventListener('touchend', stopDrag);
+slider.addEventListener('touchmove', moveDrag);
 
 //Mise à l'échelle
 function functionResize() {
