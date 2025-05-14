@@ -546,7 +546,7 @@ a:hover{
     padding: 0vh 4vw;
     align-content: center;
     align-items: center;
-    position: relative;
+    position: fixed;
     top:91vh;
     width: 100vw;
     height: 10vh;
