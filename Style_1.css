@@ -29,7 +29,7 @@
 body {
     margin: 0;
     height: 100vh;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 h1{
@@ -547,7 +547,7 @@ a:hover{
     align-content: center;
     align-items: center;
     position: fixed;
-    top:50vh;
+    top:91vh;
     width: 100vw;
     height: 10vh;
     background-color: rgba(255, 255, 255, 0.7); 
