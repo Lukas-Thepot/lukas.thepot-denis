@@ -49,11 +49,16 @@ function functionResize() {
     let scaleWidth = window.innerWidth / 1920;
     let scaleHeight = window.innerHeight / 1080;
     let scaleValue1 = Math.max(scaleHeight, scaleWidth);
-    
-    document.querySelector('.content').style.transition = "transform 0s";
-    document.querySelector('.content').style.transform = `scale(${scaleValue1})`;
+
+    const content = document.querySelector('.content');
+    content.style.transition = "transform 0s";
+    content.style.transform = `scale(${scaleValue1})`;
+
+    // Ajuster les dimensions réelles pour éviter les conflits
+    content.style.width = `${1920 * scaleValue1}px`;
+    content.style.height = `${1080 * scaleValue1}px`;
 }
-window.addEventListener("resize",functionResize);
+window.addEventListener("resize", functionResize);
 window.addEventListener("load", functionResize);
 
 //Etoiles
