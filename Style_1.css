@@ -546,7 +546,7 @@ a:hover{
     padding: 0vh 4vw;
     align-content: center;
     align-items: center;
-    position: fixed;
+    position: relative;
     top:91vh;
     width: 100vw;
     height: 10vh;
@@ -637,19 +637,4 @@ th.social a img:hover {
     0% {scale : 0.95}
     50% {scale : 1.05}
     100% {scale : 0.95}
-}
-
-@media screen and (max-width: 768px) {
-    #footer {
-        position: relative; /* Changez fixed en relative */
-        top: auto; /* Supprimez la valeur fixe */
-        width: 100%; /* Assurez-vous qu'il occupe toute la largeur */
-        height: auto; /* Ajustez la hauteur automatiquement */
-        padding: 10px; /* Ajoutez un padding pour plus de lisibilité */
-        text-align: center; /* Centrez le contenu */
-    }
-
-    th.social a img {
-        height: 30px; /* Réduisez la taille des icônes pour les petits écrans */
-    }
 }
