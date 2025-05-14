@@ -1,3 +1,31 @@
+@font-face {
+    font-family: 'Little Days';
+    src: url('Font/Little days.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aptos';
+    src: url('Fonts/Aptos.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aptos';
+    src: url('Fonts/Aptos-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aptos';
+    src: url('Fonts/Aptos-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
 body {
     margin: 0;
     height: 100vh;
